@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+:root {
+  
+    --dark:linear-gradient(90deg, rgba(0,2,36,1) 0%, rgba(1,1,24,1) 2%, rgba(8,79,93,1) 100%);
+    --primary:#3DCFD3;
+    --pure:#FFFFFF;
+    --ternary:#424242;
+    --light:#F2F2F2;
+    --secondary:#070606;
+
+  --border-radius-large:  100px;
+  --border-radius-small:  5px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: normal;
+    --webkit-font-smoothing: antialiased;
+
+}
+
+
+@keyframes Slide_Up { 
+    0%{
+        transform :translateY(250px);
+        opacity: 0;
+    }
+    100%{
+        transform :translateY(0);
+        opacity: 1;
+    }
+   
+}
+
+ 
+  header{
+    background:var(--dark);
+    padding:10px 0;
+    height: auto;
+    /* clip-path: polygon(100% 74%, 0 76%, 0 100%); */
+    border-radius: 100%/0 0 100px 30px;
+    
+}
+
+header nav .left a{
+    color: var(--pure);
+    text-decoration:none;
+    margin-right: 15px;
+    text-transform:uppercase;
+    transition:all .3s ease;
+    font-size:1.5rem;
+}
+header nav .left a:hover{
+    color: var(--primary)
+}
+.container{
+    max-width: 1152px;
+    margin:0 auto;
+}
+header nav .left .logo img{
+    width:8rem;
+    height:10rem;
+    margin-right: 15px;
+}
+.flex{
+    display: flex;
+}
+.itemsCenter{
+    align-items: center;
+}
+.space{
+    justify-content: space-between;
+}
+.btn{
+    padding:0.2rem 1rem;
+    font-size:1.5rem;
+    font-weight:600;
+    border: 2px solid transparent;
+    outline:none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition:all .3s ease;
+    text-decoration:none;
+}
+.btnPrimary{
+    background:var(--primary);
+    color: var(--secondary);
+}
+.btnPrimary:hover{
+    background-color: transparent;
+    border-color: var(--primary);
+    color: var(--pure);
+}
+.btnSecondary{
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+.btnSecondary:hover{
+    background: var(--primary);
+    color: var(--secondary);
+}
+.center{
+    justify-content: center;
+}
+.heroine {
+   margin-top: 10rem;
+   display: flex;
+   max-width: auto;
+   margin-bottom: 10rem;
+   animation: Slide_Up ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+    
+.heroine .left img{
+    width:100%;
+    height:auto;
+    display: inline-block;
+    margin: 20px;
+}
+.heroine .right{
+    color: var(--pure);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-left: 8rem;
+}
+.heroine .right h1{
+    font-size:4rem ;
+    font-weight:100 ;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+
+}
+.heroine .right h1 span{
+    color: var(--primary);
+}
+.heroine .right p{
+    font-size: 2rem;
+    line-height:2;
+    margin-bottom:2rem;
+}
+.about{
+   display:flex;
+    margin-top:25rem;
+    margin-bottom: 8rem;
+    background:var(--light);
+}
+
+section .container{
+   padding-bottom: 4rem;
+   padding-top: 6rem;
+}
+section .container .myimg{
+    width: 100%;
+    height: 100%;
+    display:flex-end;
+}
+section .container .aboutme h1{
+    margin-bottom:1rem;
+    font-size:4rem;  
+}
+section .container .aboutme h1 span{
+    color: var(--primary);
+}
+section .container .aboutme h3{
+    font-size:2rem;
+    margin-bottom:1rem;
+    font-weight:400;
+    
+}
+section .container .aboutme p{
+    font-family: 'Lato', sans-serif;
+    font-size:2rem;
+    line-height:1.9;
+    margin-bottom:1rem;
+    color: var(--text);
+}
+section .container .aboutme .p2{
+    margin-bottom:2.5rem;
+}
+section .container .aboutme {
+    padding:0 10rem;
+    display: flex-start;
+}
+section .container{
+    margin-bottom:30px;
+   margin-top: -5rem;
+   font-weight: 400;
+}
+
+section .container .aboutme .social a{
+    display: flex;
+    background:var(--dark);
+    height:35px;
+    width:35px;
+    margin-top: 10px;
+    margin:5px;
+    border-radius: 50%;
+    transition:all .3s ease-in-out;
+}
+section .container .aboutme .social a:hover{
+  
+   color: var(--secondary);
+    background:var(--secondary);
+}
+.section-heading{
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height:0.5rem;
+    font-size:2rem; 
+    padding-top: 5rem;
+}
+.section-heading span{
+    color: var(--primary);
+}
+.section-heading + p{
+    color: var(--ternary);
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 8rem;
+    text-align: center;
+    font-size:1.1rem;
+}
+.section-heading{
+    font-size:4rem;
+    padding-bottom: 4rem;
+    text-align:center;
+    color: var(--light)
+}
+.skills{
+    margin-top: 5rem;
+}
+.skills .card-wrapper{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap:3rem;
+    grid-row-gap:4rem;
+}
+.skills .card-wrapper .card{
+    background-color:var(--pure);
+    padding:2rem 3rem;
+    position:relative;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    transition:all .3s ease;
+    border-radius: 3rem;
+}
+.skills .card-wrapper .card img{
+    position: absolute;
+    top: -7rem;
+    left: 50%;
+    transform:translateX(-50%)
+}
+.skills .card-wrapper .card h2{
+    font-size:2rem;
+    margin-bottom:3rem;
+}
+.skills .card-wrapper .card p{
+    font-family: 'Lato', sans-serif;
+    color: var(--ternary);
+    line-height:2rem;
+}
+.skills .card-wrapper .card:hover{
+    background-color: var(--dark);
+}
+.skills .card-wrapper .card:hover h2,.skills .card-wrapper .card:hover p{
+    color: var(--pure);
+}
+
+
+.container-fluid {
+    overflow: hidden;
+    margin-top: 250px;
+    background: #262626;
+    color: #627482 !important;
+    margin-bottom: 0;
+    padding-bottom:3rem; 
+
+}
+
+small {
+    font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+.bold-text {
+    color: #989c9e !important
+}
+
+.mt-55 {
+    margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+h3 {
+    font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+.social {
+    font-size: 21px !important
+}
+
+.rights {
+    font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+
+
